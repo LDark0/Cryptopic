@@ -11,10 +11,12 @@ public class BinaMatte implements StegInterface{
 
 	public char[] coords;
 	
+	
+	//Encode takes in the image that will become the cover image and the message to be encoded
 		public BufferedImage encode(BufferedImage cover, String message){
 			
-			Random ranGenX = new Random();
-			Random ranGenY = new Random();
+			Random ranGenX = new Random(); // generates random x co-ords
+			Random ranGenY = new Random(); // generates random y co-ords
 			
 			byte[] byteForm = null;
 			int binaryForm = 0;
@@ -60,7 +62,8 @@ public class BinaMatte implements StegInterface{
 			}
 			return cover;
 		}
-		
+	
+		// Takes in the cover image WITH the message embedded and the key which can locate it
 		public String decode(BufferedImage cover, char[] key){
 			char[][] mess = new char[key.length/16][8];
 			int q = 0;
