@@ -1,5 +1,7 @@
 package crypto;
 
+//Short class for testing cryptography without running full code
+
 public class TestCrypto {
 
 	

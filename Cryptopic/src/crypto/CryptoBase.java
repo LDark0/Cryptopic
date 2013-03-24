@@ -1,5 +1,5 @@
 package crypto;
-
+// A basic Caesar cipher for crypto testing
 
 public class CryptoBase implements CryptoInterface{
 

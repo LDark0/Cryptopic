@@ -1,5 +1,6 @@
 package steg;
 
+//Class responsible for breaking code down to binary and hiding data in pixels as well as undoing this process.
 
 import java.awt.image.BufferedImage;
 import java.io.UnsupportedEncodingException;

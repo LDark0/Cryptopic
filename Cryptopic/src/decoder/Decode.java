@@ -1,4 +1,5 @@
 package decoder;
+//Main class for extracting messages from images
 
 import java.awt.image.BufferedImage;
 import java.io.File;

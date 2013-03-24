@@ -1,5 +1,5 @@
 package encoder;
-
+// Main class for inserting messages into images
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
