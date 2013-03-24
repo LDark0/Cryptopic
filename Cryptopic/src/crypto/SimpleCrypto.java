@@ -1,5 +1,7 @@
 package crypto;
 
+// SImple cryptography class to reverse all the binary bits in a string. Non-functional. Requires updating.
+
 import java.io.UnsupportedEncodingException;
 
 public class SimpleCrypto implements CryptoInterface{
