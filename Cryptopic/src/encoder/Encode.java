@@ -1,7 +1,9 @@
 package encoder;
 // Main class for inserting messages into images
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
@@ -36,12 +38,21 @@ public class Encode {
 		
 		changer = code.encode(changer, message);
 		
-		System.out.println();
-		
+		String keySet = "";
 		for(int c=0; c<code.coords.length; c++){
-			System.out.print((int)code.coords[c] + " ");
+			keySet = keySet + (int)code.coords[c] + " ";
 		}
-		System.out.println();
+		
+		try {
+			FileWriter key = new FileWriter("key.txt");
+			BufferedWriter writer = new BufferedWriter(key);
+			writer.write(keySet);
+			writer.newLine();
+			writer.close();
+		} catch (IOException e) {
+			
+		}
+		
 		Writer write = new Writer(new File(args[2]), changer);
 		write.save();
 	}
