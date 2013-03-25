@@ -33,18 +33,17 @@ public class Encode {
 		
 		String message = crypto.encrypt(args[1]);
 		
-		System.out.println(message);
-		
 		BinaMatte code = new BinaMatte();
 		
 		changer = code.encode(changer, message);
 		
-		System.out.println("[");
+		System.out.println();
+		
 		for(int c=0; c<code.coords.length; c++){
-			System.out.print((int)code.coords[c]+ ", ");
+			System.out.print((int)code.coords[c] + " ");
 		}
-		System.out.println("]");
-		Writer write = new Writer(new File("cover.jpg"), changer);
+		System.out.println();
+		Writer write = new Writer(new File(args[2]), changer);
 		write.save();
 	}
 

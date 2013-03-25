@@ -64,7 +64,7 @@ public class BinaMatte implements StegInterface{
 		}
 	
 		// Takes in the cover image WITH the message embedded and the key which can locate it
-		public String decode(BufferedImage cover, char[] key){
+		public String decode(BufferedImage cover, int[] key){
 			char[][] mess = new char[key.length/16][8];
 			int q = 0;
 			int p = 0;

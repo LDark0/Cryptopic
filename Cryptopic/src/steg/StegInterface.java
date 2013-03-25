@@ -9,5 +9,5 @@ public interface StegInterface {
 	
 	public BufferedImage encode(BufferedImage cover, String mess);
 	
-	public String decode(BufferedImage cover, char[] key);
+	public String decode(BufferedImage cover, int[] key);
 }
