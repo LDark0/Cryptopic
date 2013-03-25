@@ -24,7 +24,6 @@ public class Encode {
 		try {
 			source = new File(args[0]);
 			changer = ImageIO.read(source);
-			ImageIO.write(changer, ".jpg", new File("test2.jpg"));
 		} catch (IOException e) {
 			System.out.println("FAIL");
 		}
